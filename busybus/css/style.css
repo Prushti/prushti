@@ -1,0 +1,384 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: white;
+}
+
+body {
+  background-color: #58a2e1;
+  font-family: 'Raleway', Source Sans Pro, sans-serif;
+  height: 667px;
+  margin: 0 auto;
+  width: 375px;
+}
+
+.left-arrow{
+  display: inline-block;
+  padding: 21px 0px 0px 15px;
+  color: white;
+}
+
+header {
+  background-color: #58a2e1;
+  height: 85px;
+  width: 100%;
+}
+
+h1 {
+  color: white;
+  font-size: 18px;
+  margin: 22px 0px 0px 14px;
+  padding-left: 56px;
+  font-family: 'Raleway', sans-serif;
+  display: inline-block;
+}
+
+h3 {
+  color: #474348;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+p {
+ 
+  font-weight: initial;
+  
+}
+
+ul {
+  height: 85%;
+  max-height: 85%;
+  
+}
+
+ .rightarrow{
+  display:inline-block;
+  color: orange;
+  display: flex;
+  margin-top:25px;
+  margin-right: 10px;
+
+} 
+
+/*  header statusbar */
+.image { 
+  height: 23px;
+  width: 375px;
+  background-color: #58a2e1;
+  color: black;
+  
+}
+
+
+
+/* label bar */
+.labelbar {
+  background-color: #58a2e1;
+  display: flex;
+  height: 39px;
+  width: 100%;
+} 
+
+.recording{
+  display: inline-block;
+  margin-left: 75px;
+  color: white;
+  margin-bottom: 9px;
+}
+
+.map_image{
+  height: 265px;
+  width: 375px;
+
+}
+
+.dd-label {
+  margin-top: 12px;
+  margin-left: 18px;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-weight: normal;
+  
+}
+
+.frequency-label {
+  margin-left: auto;
+  padding: 6px 9px 0 0;
+  margin-right: 21px;
+  margin-top: 6px;
+  color: white;
+  font-family: 'Raleway',sans-serif;
+  font-weight: normal;
+}
+
+/* Full Bus element */
+.bus {
+  background-color: white;
+  border-bottom: 9.5px solid #58a2e1;
+  color: black;
+  display: flex;
+  flex-wrap: wrap;
+  height: 75px;
+  width: 100%;
+}
+
+/* Div making up the grey number box */
+.bus-number-box {
+  background-color: #426BF2;
+  height: 40px;
+  width: 40px;
+  font-family: 'Raleway',sans-serif;
+  border-radius: 100%;
+  display: inline-block;
+  margin-top: 10px;
+} 
+
+.bus-number {
+  align-items: center;
+  font-size: 15px;
+  font-weight: normal;
+  padding: 17px 8px;
+  color: white;
+  line-height: 7px;
+  text-align: center;
+}
+
+.bus-icon{
+  padding-left: 12px;
+  padding-top: 12px;
+  color: #FF9500;
+}
+
+/* Divs containing bus direction and destination */
+.info {
+  display: flex;
+  flex: 2;
+  flex-direction: column;
+  justify-content: center;
+  padding: 18px 0 10px 11px;
+}
+
+.direction {
+  margin-bottom: 10px;
+  max-height: 14px;
+  order: 0;
+  font-weight: bold;
+  color: #070707;
+}
+
+.destination {
+  color: #f29f00;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/* Divs containing frequency and bus times */
+.time {
+  
+  display: flex;
+  flex-direction: column;
+  padding: 5px 12px 5px 0;
+  text-align: right;
+}
+
+.am-pm {
+  font-size: 20px;
+  margin-top: 2px;
+}
+
+.every {
+  color: black;
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+/* .next-bus {
+  color: black;
+  font-size: 12px;
+  margin-top: 2px;
+} */
+
+.next-bus-time {
+  font-size: 20px;
+  margin: 7px 0;
+}
+
+/* Styling for rerouted bus */
+.na {
+  font-size: 20px;
+  padding-top: 30px;
+  color: red;
+  font-weight: bolder;
+}
+
+/* Stlying for out of service buses */
+.oos-time {
+  display: flex;
+  
+  flex-direction: column;
+  
+  padding: 10px 16px 5px 0;
+  text-align: right;
+}
+
+.ofs {
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.resumes {
+  color: black;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.resumetime {
+  font-size: 20px;
+  margin: 2px 0;
+}
+
+.navbar{
+  height: 85px;
+  margin-top: 0;
+}
+
+
+.statusbar{
+  display: inline-block
+}
+
+.backgroundBottom {
+    background: #58a2e1;
+    background-size: contain;
+    height: 45px;
+    bottom: 0;
+    width: 375px;
+    z-index: 1;
+    
+} 
+
+.plan,.favorites,.home,.schedule,.aroundme{
+  
+  display: inline-block;
+  text-align: center;
+  position: relative;
+    top: -5px;
+}
+
+.bus_plan{
+  display: block;
+  height: 31px;
+  width: 39px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bus_favorites{
+  display: block;
+  height: 31px;
+  width: 39px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+.bus_home{
+  display: block;
+  height: 31px;
+  width: 39px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bus_schedule{
+  display: block;
+  height: 31px;
+  width: 39px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bus_aroundme{
+  display: block;
+  height: 31px;
+  width: 39px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.busplan{
+  padding-left: 12px;
+}
+
+.busfavorites{
+  padding-left: 22px;
+
+}
+
+.bushome{
+   padding-left: 29px;
+}
+
+.busschedule{
+   padding-left: 32px;
+   
+}
+
+.busaroundme{
+   padding-left: 25px;
+}
+
+.plan-text{
+   color: white;
+   -webkit-user-drag: none;
+   font-size: 10px;
+}
+
+
+.favorites-text{
+    color: white;
+   -webkit-user-drag: all;
+   font-size: 10px;
+}
+
+.home-text{
+   color: white;
+  -webkit-user-drag: all;
+   font-size: 10px;
+}
+
+.schedule-text{
+    color: white;
+   -webkit-user-drag: all;
+    font-size: 10px;
+}
+
+.aroundme-text{
+
+   color: #436bf2;
+  -webkit-user-drag: all;
+   font-size: 10px;
+}
+
+.outdirection {
+  margin-bottom: 10px;
+  max-height: 14px;
+  order: 0;
+  font-weight: bolder;
+  color: #9E9E9E;
+}
+
+.reroutedirection {
+  margin-bottom: 10px;
+  max-height: 14px;
+  order: 0;
+  font-weight: bolder;
+  color: red;
+}
