@@ -1,4 +1,4 @@
-const passwordBtn = document.querySelector("button#passwordBtn");
+const passwordBtn2 = document.querySelector("button#passwordBtn");
 const inputEl = document.querySelector("input#password");
 
 async function digestMessage(message) {
@@ -12,7 +12,7 @@ async function digestMessage(message) {
   // ... (same as before)
 }
 
-passwordBtn.addEventListener("click", (e) => {
+passwordBtn2.addEventListener("click", (e) => {
   e.stopPropagation();
   const text = inputEl.value;
   console.log(text);
