@@ -1,4 +1,4 @@
-const passwordBtn2 = document.querySelector("button#passwordBtn");
+const passwordBtn2 = document.querySelector("button#passwordBtn2");
 const inputEl = document.querySelector("input#password");
 
 async function digestMessage(message) {
