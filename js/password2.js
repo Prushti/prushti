@@ -25,7 +25,7 @@ passwordBtn2.addEventListener("click", (e) => {
     if (digestHex === correctPasswordHash) {
       console.log("Awsome!");
       // Add the code here to redirect the user to the particular case study page.
-      window.location.href = "https://prushti.com/kp.html";
+      window.location.href = "http://prushti.com/kp.html";
     } else {
       console.log("Incorrect password. Please try again.");
     }
