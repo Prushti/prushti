@@ -1,0 +1,294 @@
+/* ==========================================================================
+   responsive-fixes.css  —  site-wide responsive & pixel-consistency fixes
+   Load this file LAST so it wins over app.css / old_css/style.css.
+   ========================================================================== */
+
+
+/* ----- Spacing scale (edit these to retune the whole site) ----- */
+:root {
+  /* desktop values */
+  --side-pad: 20px;        /* screen-edge padding */
+  --nav-pad-y: 1rem;       /* header vertical padding */
+  --hero-top: 110px;       /* space above the hero headline */
+  --hero-bottom: 90px;     /* space below the hero */
+  --card-gap: 64px;        /* image-to-text gap inside a card */
+  --card-stack: 130px;     /* space between project cards */
+  --footer-top: 160px;     /* space above "Say Hello." */
+}
+
+@media (min-width: 40em) and (max-width: 63.9375em) {
+  :root {
+    --side-pad: 32px;
+    --nav-pad-y: 0.75rem;
+    --hero-top: 56px;
+    --hero-bottom: 56px;
+    --card-gap: 24px;
+    --card-stack: 80px;
+    --footer-top: 96px;
+  }
+}
+
+@media (max-width: 39.9375em) {
+  :root {
+    --side-pad: 20px;
+    --nav-pad-y: 0.35rem;
+    --hero-top: 36px;
+    --hero-bottom: 44px;
+    --card-gap: 16px;
+    --card-stack: 60px;
+    --footer-top: 88px;
+  }
+}
+
+/* ----- Global guards ----- */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+canvas {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* =================== Sticky header / navigation =================== */
+
+.top-bar-container {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header {
+  background: #ffffff;
+  padding: 0;
+}
+
+.nav-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: var(--nav-pad-y) var(--side-pad);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo-link {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.logo-image {
+  height: 5rem;
+  width: auto;
+  display: block;
+}
+
+.menu {
+  margin-left: auto;
+}
+
+.menu .menu-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Desktop & tablet: horizontal menu, no hamburger */
+@media (min-width: 40em) {
+  .menu .menu-items {
+    display: flex;
+    align-items: center;
+  }
+  .menu .menu-items li {
+    padding-top: 0;
+  }
+}
+
+/* Tablet: shrink logo & link margins so nav fits on one line */
+@media (min-width: 40em) and (max-width: 63.9375em) {
+  .logo-image {
+    height: 3.75rem;
+  }
+  .menu .menu-items li a {
+    margin-left: 0.85rem;
+    margin-right: 0.85rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Narrowest tablets (640–719px): tighten further */
+@media (min-width: 40em) and (max-width: 44.9375em) {
+  .logo-image {
+    height: 3rem;
+  }
+  .menu .menu-items li a {
+    margin-left: 0.55rem;
+    margin-right: 0.55rem;
+    font-size: 0.82rem;
+  }
+}
+
+/* Phone: collapsible menu behind hamburger */
+@media (max-width: 39.9375em) {
+  .logo-image {
+    height: 3.25rem;
+    padding-top: 0;
+  }
+  .menu-icon-custom {
+    padding: 22px 4px 22px 20px;
+  }
+  .menu {
+    flex-basis: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+  }
+  .menu-btn:checked ~ .menu {
+    max-height: 340px;
+  }
+  .menu .menu-items {
+    padding-bottom: 0.75rem;
+  }
+  .menu .menu-items li {
+    display: block;
+    text-align: center;
+    padding: 0.85rem 0 0.35rem;
+  }
+  .menu .menu-items li a {
+    margin: 0;
+  }
+}
+
+/* =================== Intro & footer =================== */
+
+#intro,
+footer {
+  /* same container as the project cards so the hero text,
+     footer, and card images all share one left edge */
+  max-width: 1120px;
+  margin: var(--hero-top) auto var(--hero-bottom);
+  padding: 0 var(--side-pad);
+}
+
+/* keep paragraph line-length readable even in the wider container */
+#intro p,
+footer p {
+  max-width: 860px;
+}
+
+footer {
+  margin: var(--footer-top) auto 40px;
+}
+
+.bigheadline {
+  /* scales smoothly from phone to desktop instead of a fixed 3.3em */
+  font-size: clamp(2.05rem, 1.2rem + 3.6vw, 3.3em);
+  line-height: 1.25;
+}
+
+@media (max-width: 63.9375em) {
+  footer {
+    margin: var(--footer-top) auto 32px;
+  }
+}
+
+/* =================== Project cards (homepage) =================== */
+
+.content-container {
+  max-width: 1120px;
+  margin: 0 auto var(--card-stack);
+  padding: 0 var(--side-pad);
+}
+
+.project-container {
+  display: flex;
+  align-items: center;
+  gap: var(--card-gap);
+  margin: 0;
+}
+
+/* every card shares the same image column width => consistent alignment */
+.project-media {
+  flex: 0 0 58%;
+  display: block;
+  line-height: 0;
+}
+
+.project-img {
+  width: 100%;
+  height: auto;
+  max-height: none;
+  display: block;
+  border-radius: 6px;
+}
+
+.project-overview {
+  flex: 1 1 auto;
+  min-width: 0;
+  margin: 0;
+}
+
+.explore-arrow {
+  font-size: 24px;
+  line-height: 1;
+  margin-right: 6px;
+  color: #001e44;
+}
+
+.project-explore {
+  display: inline-block;
+}
+
+/* Tablet & phone: stack image above text */
+@media (max-width: 63.9375em) {
+  .project-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .project-media {
+    flex-basis: auto;
+  }
+  .project-overview {
+    margin: 0;
+  }
+}
+
+/* Large tablet / small laptop: keep side-by-side but tighter */
+@media (min-width: 64em) and (max-width: 74.9375em) {
+  :root {
+    --card-gap: 44px;
+    --card-stack: 110px;
+  }
+}
+
+/* =================== Case-study & about pages =================== */
+
+/* Bootstrap-style rows used on inner pages: let columns wrap on phones */
+@media (max-width: 39.9375em) {
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* Foundation offset cells (e.g. small-6 + small-offset-1) add up to >100%
+     per row and push content off-screen on phones — drop the offsets */
+  [class*="small-offset-"] {
+    margin-left: 0 !important;
+  }
+}
+
+/* Center helper replacing old inline margin-left nudges (busybus user flow) */
+.centered-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
