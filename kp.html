@@ -126,7 +126,7 @@
                                 <div class="grid-x grid-padding-x align-center text-left">
                                     <div class="cell medium-8">
                                       <h3 class="phase-title pb1">Problem and Opportunity</h3>
-                                        <!--<h2 class="section-header">Who are the users?</h2> -->
+                                       
 										<b style="font-size:24px;">Relying on KP support is overwhelming</b>
                                         <p>
                                         Unlike many other insurance carriers, Kaiser Permanente does not provide General Agents with self-service access to their Book of Business in Account.kp. As a result, General Agents must rely on phone calls and emails to KP support to 
@@ -143,8 +143,10 @@
                           <div class="grid-x grid-padding-x align-center text-left">
                               <div class="cell medium-8">
                                 <h3 class="phase-title pb1">My Discovery Cycle</h3>
-                                  <!--<h2 class="section-header">Who are the users?</h2> -->
-                                  <div class="text-center">
+								  <p> My discovery process was centered on understanding the problem before jumping into solutions. I started by exploring user pain points, business goals, and existing metrics to identify where General Agents were struggling most. From there, I formed hypotheses and validated them through user interviews and prototype testing. Each round of feedback helped refine the opportunity statement, challenge assumptions, and uncover new insights. 
+									  This iterative approach ensured the final solution addressed real user needs while supporting Kaiser Permanente's business objectives.</p>
+
+								  <div class="text-center">
                                       <img src="./images/KP/research.png" alt="image of research" class="Research"/>
                                   </div>
 
@@ -158,13 +160,16 @@
                                             <div class="grid-x grid-padding-x align-center text-left">
                                                 <div class="cell medium-8">
                                                   <h3 class="phase-title pb1">The Users</h3>
-                                                <!--    <h2 class="section-header">Understanding the users, the problem, and the proposed solution</h2> </br> -->
-                                                <p> General Agencies provide end-to-end support for small group brokers, offering expert guidance through quoting, underwriting, and enrollment, as well as specialized assistance with licensing, renewals, and ongoing consultation. </p> </br>
+													<b style="font-size:24px;">Empowering General Agents Through Better Experiences</b>
+												
+                                                <p> General Agents serve as trusted partners who support small group brokers throughout the entire health insurance sales and servicing journey. 
+													They act as an extension of Kaiser Permanente, helping brokers navigate complex processes such as quoting, underwriting, enrollment, renewals, licensing, and ongoing account management. </p> </br>
                                                 
                                                  <div class="text-center">
                                                               <img src="./images/KP/kp_client.png" alt="client" class="client"/>
                                                           </div>
-                                                          <p> General Agencies support small group brokers at each step of their journey including quoting, underwriting, sales support, enrollment support, ongoing group support, renewals, broker education and consulting and broker licensing and appointing.
+                                                          <p> Because General Agents support multiple brokers and employer groups simultaneously, they need efficient tools and self-service capabilities to quickly access information, resolve issues, track progress, 
+															  and provide timely guidance.Their goal is to simplify complex workflows, reduce dependency on support teams, and help brokers deliver a seamless experience for their clients.
                                                 </p></br>
                                                 <div class="text-center">
                                                               <img src="./images/KP/GA defination.png" alt="GA" class="GA"/>
@@ -179,8 +184,17 @@
                               <div class="cell medium-8">
                                 <h3 class="phase-title pb1">My Design Approach</h3>
                                   <!--<h2 class="section-header">Who are the users?</h2> -->
-                                  <div class="text-center">
+                                 
+									  <p> I followed a discovery-driven process grounded in evidence rather than assumptions. Starting with an opportunity assessment, I mapped the user experience of General Agency administrators to surface pain points, 
+										  then framed the problem around a measurable goal: reducing call volume to the KP call center caused by tasks that couldn't be completed in a single channel. I then documented our 
+										  assumptions as testable questions and validated them through prototype testing, user interviews, and technical and SME sessions — separating real user needs from internal beliefs and surfacing risks early.</p>
+
+								   <div class="text-center">
                                       <img src="./images/KP/hypothesis.png" alt="image of hypothesis" class="Hypothesis"/>
+								  </div>
+								  <p> Each round of feedback reshaped both the design and the problem definition itself: I updated the opportunity statement and hypothesis, iterating from paper sketches to higher-fidelity dashboard prototypes to keep the feedback loop fast. The findings converged on a self-service solution —
+									  a pilot that lets agency users register for an admin-level account, delegate access to employees, and view their dashboard, quotes, and group enrollment, directly eliminating the need to call in for routine tasks.</p>
+								  
                                   </div>
 
                               </div>
@@ -188,18 +202,17 @@
 
                       </div>
                   </div>
-                  
-                        
-                              
-
-                                    <div class="grid-container">
+                  		  <div class="grid-container">
                                               <div class="section-container">
                                                   <div class="grid-x grid-padding-x align-center text-left">
                                                       <div class="cell medium-8">
                                                         <h3 class="phase-title pb1">User Flow</h3>
-                                                          <!--<h2 class="section-header">Who are the users?</h2> -->
+														  <b style="font-size:24px;">Mapping the journey from complexity to confidence </b>
+                                                       
                                                           <p>
-                                                            Once I had a better understanding of the users, the problem, and the proposed solution, I led a user flow session with the team. This helped me understand the different paths the user could take within the tool, which would help me complete the next iteration more effectively.
+                                                            Before designing any screens, I wanted to truly understand what it takes for a General Agency to get access in the first place — so I sketched out the entire journey, from the moment a GA firm starts working with a
+														    broker who has a Book of Business with Kaiser, all the way to a GA admin confidently granting access to their own team. Laying it out step by step was eye-opening: this wasn't one person's journey, but a relay between brokers, KP staff, and GA admins — and if any handoff stumbled, users ended up right back on the phone with the call center. As questions came up — Who validates the request? What happens when a customer opts out? Do GAs even need individual licenses? — I captured them directly on the map and worked through them with SMEs. 
+														   What started as a simple diagram became our shared source of truth, and those conversations shaped the registration, activation, and role-assignment experience at the heart of the pilot.
                                                             </p></br>
 
                                                           <div class="text-center">
@@ -216,13 +229,12 @@
                                                         <h3 class="phase-title pb1">Access Model</h3>
                                                           <!--<h2 class="section-header">Who are the users?</h2> -->
                                                           <p>
-                                                            I created the Access Model for consistant experience for all Customer and channel partners. It helped me to discover micro process between primary users and secondary users.
+                                                           This is where the design had to meet the realities of security. Working with technical SMEs, I helped shape a flow where KP staff first enter the GA admin's info into a system of record — the source of truth for broker-GA 
+															  relationships. From there, the admin self-registers at account.kp.org, gets verified with a one-time activation code, and unlocks secure features like their firm's book of business. My favorite part is what happens next: the admin can now add their own delegates, each receiving 
+															  an access code to self-register the same way. That loop was the whole point — agencies onboarding their own teams without a single phone call, while KP keeps the validation checkpoints that make the access trustworthy.
 
                                                             </p></br>
-                                                            <p> After User Mapping, I discovered that GA firm will need to designate a GA Administrator and GA Administrator’s data will be maintained and managed in the SOR (like how Broker’s data is in SOR and associated to firm)
-                                                            </p> </br>
-
-                                                          <div class="text-center">
+                                                            <div class="text-center">
                                                               <img src="./images/KP/access model.png" alt="model" class="model"/>
                                                           </div>
                                                       </div>
@@ -233,79 +245,36 @@
                                                     <div class="section-container">
                                                         <div class="grid-x grid-padding-x align-center text-left">
                                                             <div class="cell medium-8">
-                                                              <h3 class="phase-title pb1">Visual Design</h3>
-                                                               <!-- <h2 class="section-header">Bringing the sketching, ideating, and user research to life.</h2> -->
+                                                              <h3 class="phase-title pb1">Solution</h3>
+                                                               <b style="font-size:24px;">The GA Dashboard </b>
+																
                                                                 <p>
-                                                                  Making this a more self-serve, service platform, and creating a visual view for GAs who provide thousands of brokers and employers admin support.
+                                                                  The dashboard became the front door to everything a General Agency needs — a single platform serving GAs across all US regions, built to help them maintain their Book of Business for every broker and employer they support. 
+																  I kept the design intentionally focused: quoting and new group enrollment sit front and center since those are the most frequent tasks,
+																  while "Manage delegated access" gives admins a clear path to onboard their team. No clutter, no hunting through menus — just the things GAs used to call the KP call center for, now one click away.
                                                                 </p>
-                                                                
+                                                                </br>
+																<div class="text-center">
+                                                                                <img src="./images/KP/dashboard.png" alt="dashboard" class="dashboard"/>
+                                                                            </div>
+                                                               
 
-                                                                </p></br>
-                                                                <div class="text-center">
+																 <b style="font-size:24px;">Account Delegation</b>
+																<p> This screen is where the delegation model comes to life. GA admins can see their entire team at a glance — who has access, what permissions they hold, and whose invitations have expired — and take action right from 
+																	the table: resend an invite, view details, or remove someone in a click. I designed the permissions to be granular, so an admin can give one person just the Book of Business while another handles commission 
+																	statements and new sales. What used to require a phone call to Kaiser for every single access change is now something agencies manage themselves, in seconds, with full visibility and control.</p>
+															</br>
+																  <div class="text-center">
                                                                     <img src="./images/KP/acnt_delegation.png" alt="acnt_delegation" class="acnt_delegation"/>
                                                                 </div>
+																
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="grid-container">
-                                                          <div class="section-container">
-                                                              <div class="grid-x grid-padding-x align-center text-left">
-                                                                  <div class="cell medium-8">
-                                                                    <h3 class="phase-title pb1">USABILITY TESTING</h3>
-                                                                     <!--<h2 class="section-header">Testing the prototype with actual users to iterate based on user needs and feedback</h2> -->
-                                                                      <p>
-                                                                        I tested the prototype with 10 GAs from different regions who are KP’s customers.
-                                                                      </p>
-                                                                      <p>To test the users, I sent them the link and had them share their screens with me. I asked them to narrate their thoughts and processes as they clicked through the tasks I gave them.
-                                                                      </p>
-                                                                  </div>
-                                                              </div>
-                                                          </div>
-                                                      </div>
-                                                      <div class="grid-container">
-                                                                <div class="section-container">
-                                                                    <div class="grid-x grid-padding-x align-center text-left">
-                                                                        <div class="cell medium-8">
-                                                                          <h3 class="phase-title pb1">Solution</h3>
-                                                                            <!--<h2 class="section-header">Who are the users?</h2> -->
-                                                                            <p>
-                                                                              A platform which allows for GAs across all the regions of USA, provide solution to maintain Book of Business for all the brokers and employers. 
+                                                
 
-                                                                            <div class="text-center">
-                                                                                <img src="./images/KP/dashboard.png" alt="dashboard" class="dashboard"/>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            
-                                                                 
-
-
-
-
-
-                        <!-- banner -->
-      <!--      <div class="grid-container">
-                <div class="section-container">
-                    <div class="grid-x grid-padding-x align-center text-left">
-                        <div class="cell medium-8">
-                          <h3 class="phase-title pb1">NESSUS</h3>
-
-                            <p>Nessus is industry's most trusted vulnerability assessment solution to assess the modern attack surface. I woked on Nessus Pro and Nessus Expert Scan Management User Experience.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="music-lovers-profiles grid-x grid-padding-x align-center text-left">
-                        <div class="cell medium-6">
-                            <div class="text-center">
-                                <img src="./images/tenable/nessus.png" alt="Photo of Gience" class="persona-display"/>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
+											
 
               <div class="grid-container">
                       <div class="section-container">
